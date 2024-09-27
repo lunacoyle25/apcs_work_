@@ -32,5 +32,7 @@ public class IcyHot{
     public static void main(String[] args)
     {
         testIcyHot(-1, 200, true);
+        testIcyHot(0,12, false);
+        testIcyHot(-9,99, false);
     }
 }
