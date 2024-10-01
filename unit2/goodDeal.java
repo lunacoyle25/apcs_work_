@@ -5,12 +5,6 @@ Luna Coyle 10/1/24
 
 public class goodDeal 
 {
-    public static void main(String[] args)
-    {
-        testGoodDeal(6,4,true);
-        testGoodDeal(20,14,true);
-        testGoodDeal(20,17,false);
-    }
     public static boolean goodDeal(double originalPrice, double salePrice)
     {
       if (salePrice < .75*originalPrice)
@@ -34,5 +28,11 @@ public class goodDeal
         {
             System.out.println("False");
         }
+    }
+    public static void main(String[] args)
+    {
+        testGoodDeal(6,4,true);
+        testGoodDeal(20,14,true);
+        testGoodDeal(20,17,false);
     }
 }
