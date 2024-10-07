@@ -18,7 +18,7 @@ public class IcyHot{
     public static void testIcyHot(int temp1, int temp2, boolean expected)
     {
       boolean result = IcyHot(temp1, temp2); 
-        System.out.println(" temp 1: " + temp1 + " temp 2: " + temp2 + " expected: " + expected + " result: " + result);
+        System.out.println("temp 1: " + temp1 + "  temp 2: " + temp2 + "  expected: " + expected + "  result: " + result);
         if (result == expected)
         {
             System.out.println("correct");
