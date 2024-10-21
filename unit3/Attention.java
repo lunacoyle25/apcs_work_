@@ -9,10 +9,14 @@ public class Attention
     public static boolean attention(String input)
     {
         String str = "Hey you!";
-        if (input.length() >= 8 && input.substring(0,8).equals(str))
-      {
+        if (input.length() < 8)
+        {
+           return false;
+        }
+        if (input.substring(0,8).equals(str))
+        {
             return true;
-      }
+        }
         else
         {
             return false;
