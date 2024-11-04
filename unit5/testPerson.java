@@ -12,7 +12,7 @@ public class testPerson
         Person drkessner = new Person("Dr. Kessner", 9);
         drkessner.greeting();
         
-        Person tessa = new Person("Tessa", 1);
-        drkessner.greeting();
+        Person tessa = new Person("Tessa", 0);
+        tessa.greeting();
     }
 }
