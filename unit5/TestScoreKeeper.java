@@ -8,19 +8,15 @@ public class TestScoreKeeper
     {
         ScoreKeeper scoreKeeper = new ScoreKeeper();
 
-        // Test initial score
-        System.out.println("Initial score: " + scoreKeeper.getScore()); // Should print 0
+        System.out.println("Initial score: " + scoreKeeper.getScore());
 
-        // Test scoreNormal method
         scoreKeeper.scoreNormal();
-        System.out.println("Score after normal scoring: " + scoreKeeper.getScore()); // Should print 100
+        System.out.println("Score after normal scoring: " + scoreKeeper.getScore()); 
 
-        // Test scoreBonus method
         scoreKeeper.scoreBonus();
-        System.out.println("Score after bonus scoring: " + scoreKeeper.getScore()); // Should print 1100
+        System.out.println("Score after bonus scoring: " + scoreKeeper.getScore()); 
 
-        // Test scoreNormal again
         scoreKeeper.scoreNormal();
-        System.out.println("Score after another normal scoring: " + scoreKeeper.getScore()); // Should print 1200
+        System.out.println("Score after another normal scoring: " + scoreKeeper.getScore()); 
     }
 }
