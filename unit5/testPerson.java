@@ -9,10 +9,10 @@ public class testPerson
         Person luna = new Person("Luna", 2);
         luna.greeting();
         
-        
-        
         Person drkessner = new Person("Dr. Kessner", 9);
         drkessner.greeting();
         
+        Person tessa = new Person("Tessa", 1);
+        drkessner.greeting();
     }
 }
