@@ -2,7 +2,7 @@
 Unit 5 Assignment 1 test
 */
 
-public class testPerson
+public class TestPerson
 {
     public static void main(String[] args)
     {
