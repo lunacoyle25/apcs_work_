@@ -4,26 +4,34 @@ Unit 6 Practice 1
 Based off of HelloProcessing class
 */ 
 
-import process.core.*;
+import processing.core.*;
 
 public class TinySquare extends PApplet
 {
     public void settings()
     {
-        size(500,500);
+        size(500, 500);
         //always put size function in settings
     }
     public void setup()
     {
-        //don't add moving component yet until you fix the PApplet error
+        x = 40;
     }
     public void draw()
     {
-        background(0);
-        square(100, 50, 120);
+        background(255, 182, 193);
+        square(x, 250, 30);
+        x++;
+        
+        if (x > width)
+        {
+            x = -30;
+        }
     }
+    
+    private float x; 
     public static void main(String[] args)
     {
-        PApplet.main("HelloTinySquare");
+        PApplet.main("TinySquare");
     }
 }
