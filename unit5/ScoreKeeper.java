@@ -5,8 +5,6 @@ Unit 5 Assignment 2
 
 public class ScoreKeeper
 {
-    private int score;
-    
     public ScoreKeeper()
     {
         score = 0;
@@ -27,5 +25,6 @@ public class ScoreKeeper
         score += 1000;
     }
     
+    private int score;
     //private static final int scoreCount = 0;
 }
