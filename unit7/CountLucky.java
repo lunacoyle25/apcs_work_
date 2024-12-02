@@ -1,6 +1,6 @@
 /* 
 Luna Coyle 12/1/24
-Unit 7 Assignment 1a 
+Unit 7 Assignment 1 
 CountLucky.java
 */
 
