@@ -24,6 +24,7 @@ public class CountLuckyAL
     public static void testCountLuckyAL(Integer[] lucky, int expected)
     {
         ArrayList<Integer> luckyList = new ArrayList<>(Arrays.asList(lucky));
+        //had to look this up; is this something I should know? 
         
         int result = countLuckyAL(luckyList);
         for (int value : luckyList)
