@@ -17,7 +17,7 @@ public class SumOfSquaresAL
         }
         return sum; 
     }
-    public static void testsSumOfSquares(ArrayList<Double> values, double expected)
+    public static void testSumOfSquares(ArrayList<Double> values, double expected)
     {
         double result = sumOfSquares(values);
         for (double value : values)
@@ -39,10 +39,10 @@ public class SumOfSquaresAL
     public static void main(String[] args)
     {
         ArrayList<Double> values = new ArrayList<Double>(); 
-        values.add(1.0);
+        values.add(8.5);
         values.add(2.0);
-        values.add(3.0);
+        values.add(4.9);
         
-        testSumOfSquares(values, 14.0);
+        testSumOfSquares(values, 100.26);
     }
 }
