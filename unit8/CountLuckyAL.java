@@ -21,13 +21,10 @@ public class CountLuckyAL
         return count;   
     } 
     
-    public static void testCountLuckyAL(Integer[] lucky, int expected)
-    {
-        ArrayList<Integer> luckyList = new ArrayList<>(Arrays.asList(lucky));
-        //had to look this up; is this something I should know? 
-        
-        int result = countLuckyAL(luckyList);
-        for (int value : luckyList)
+    public static void testCountLuckyAL(ArrayList<Integer> lucky, int expected)
+    {   
+        int result = countLuckyAL(lucky);
+        for (int value : lucky)
         {
             System.out.println(value + " ");
         }
@@ -46,23 +43,30 @@ public class CountLuckyAL
    
     public static void main(String[] args)
     {  
-        ArrayList<Integer> lucky = new ArrayList<>();
+        
+        //had to look this up; is this something I should know? 
+        
+        //ArrayList<Integer> lucky = new ArrayList<>();
         
         Integer[] array = {7, 8, 9};
-        lucky.addAll(Arrays.asList(array));
+        ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(array));
         
-        Integer[] array1 = {1, 2, 3};
-        lucky.addAll(Arrays.asList(array1));
         
-        Integer[] array2 = {1, 49, 17, 33, 35};
-        lucky.addAll(Arrays.asList(array2));
+        //lucky.addAll(Arrays.asList(array));
+        //or could say ArrayList<Double> values = Arrays.asList(array)
         
-        Integer[] array3 = {84, 27, 70, 91, 7};
-        lucky.addAll(Arrays.asList(array3));
+        //Integer[] array1 = {1, 2, 3};
+        //lucky.addAll(Arrays.asList(array1));
         
-        testCountLuckyAL(array, 1);
-        testCountLuckyAL(array1, 0);
-        testCountLuckyAL(array2, 3);
-        testCountLuckyAL(array3, 5);
+        //Integer[] array2 = {1, 49, 17, 33, 35};
+        //lucky.addAll(Arrays.asList(array2));
+        
+        //Integer[] array3 = {84, 27, 70, 91, 7};
+        //lucky.addAll(Arrays.asList(array3));
+        
+        testCountLuckyAL(arrayList, 1);
+        //testCountLuckyAL(array1, 0);
+        //testCountLuckyAL(array2, 3);
+        //testCountLuckyAL(array3, 5);
     }
 }
