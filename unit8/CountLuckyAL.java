@@ -42,11 +42,10 @@ public class CountLuckyAL
     }  
    
     public static void main(String[] args)
-    {  
-        
-        //had to look this up; is this something I should know? 
+    { 
         
         //ArrayList<Integer> lucky = new ArrayList<>();
+        //had to look this up; is this something I should know? 
         
         Integer[] array = {7, 8, 9};
         ArrayList<Integer> arrayList = new ArrayList<>(Arrays.asList(array));
