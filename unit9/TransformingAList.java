@@ -7,31 +7,48 @@ import java.util.*;
 
 public class TransformingAList 
 {
-    public static String reverse(String s)
+    public static ArrayList<String> reverse(ArrayList<String> s)
     {
-        String rewrite = "";
-        for (int i = s.length()-1; i >= 0; i--)
+        
+        ArrayList<String> rewrite = new ArrayList<String>();
+        for (String value : s)
         {
-            rewrite += s.substring(i, i+1); 
+            String reversedString = "";
+           for (int i = value.length()-1; i >= 0; i--)
+            {
+                reversedString += value.substring(i, i+1); 
+            } 
+            rewrite.add(reversedString);
         }
-        return rewrite;
+        return rewrite;   
     }
     
     
-   public static void testTransformingAList(String s, String expected)
+   public static void testTransformingAList(ArrayList<String> s, ArrayList<String> expected)
     {
-       String result = reverse(s);
+       ArrayList<String> result = reverse(s);
        
-       System.out.println("expected: " + expected + " result: " + result);
+        System.out.println("expected: " + expected + " result: " + result);
        
         if (result.equals(expected))
         {
             System.out.println("Yay"); 
         }
+       else 
+       {
+           System.out.println("Neigh");
+       }
    }
     
     public static void main(String[] args)
     {
-        testTransformingAList("meow meow", "woem woem");
+        String[] values = {"meow meow", "california"};
+        ArrayList<String> valueList = new ArrayList<>(Arrays.asList(values));
+        
+        ArrayList<String> expected = new ArrayList<String>();
+        expected.add("woem woem");
+        expected.add("ainrofilac");
+        
+        testTransformingAList(valueList, expected);
     }
 }
