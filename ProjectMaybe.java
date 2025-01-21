@@ -8,7 +8,7 @@ import processing.core.*;
 
 public class ProjectMaybe extends PApplet
 {
-//just a copy cat of tinysquare... acc make soemthing later
+//just a copy cat of tinysquare... acc make something later
     public void settings()
     {
         size(500, 500);
