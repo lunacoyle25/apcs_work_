@@ -1,6 +1,8 @@
 /* 
 Task List 
 - make a Bounce class 
+- Get PApplet running 
+- Set up game states 
 
 
 
@@ -12,6 +14,10 @@ Brainstorming
 
 
 Project Feature List 
-
+- Need to use relative coordinates to let the game adapt to the different screen sizes and so you can change the game's size
+- 3 game states: 
+    1. Welcome 
+    2. Actual Game 
+    3. If/when you lose 
 
 */ 

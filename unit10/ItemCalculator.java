@@ -13,26 +13,41 @@ public class ItemCalculator
         }
     }
     
-    public static float averagePrice(ArrayList<Item> items)
+    public static float averagePrice(ArrayList<Items> items)
     {
         float average = 0;
         for (Items x : items)
         {
-            double average += x.getPrice(); 
+            average += x.getPrice(); 
         }
         return average / items.size();
     }
     
-    public static String costly(ArrayList<Item> items)
+    public static String pricey(ArrayList<Items> items)
     { 
-        pricey = items.get(0);
+        Items pricey = items.get(0);
         for (Items x : items)
         { 
-            if (i.getPrice() > pricey.getprice())
+            if (x.getPrice() > pricey.getPrice())
             {
-                pricey = items.get(i);
+                pricey = x;
             }
         }
         return pricey.getName();  
+    }
+    
+    public static void main(String[] args)
+    {
+        ArrayList<Items> items = new ArrayList<Items>(); 
+        
+        items.add(new Items("Milk", 4.99f));
+        items.add(new Items("Coleslaw", 3.99f));
+        items.add(new Items("Strawberries", 6.99f));
+         
+        printItems(items); 
+        System.out.println();
+        System.out.println("average price: " + averagePrice(items));
+        System.out.println("most expensive item: " + pricey(items));
+        
     }
 }

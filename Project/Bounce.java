@@ -28,6 +28,7 @@ public class Bounce extends PApplet
         for (int i=0; i<10; i++)
         balls.add(new Ball(this)); 
     }
+    
     private ArrayList<Circle> circles;
     
     public static void main(String[] args)
