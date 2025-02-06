@@ -1,23 +1,25 @@
-/* 
-Task List 
-- make a Bounce class 
-- Get PApplet running 
-- Set up game states 
-
-
-
 
 Brainstorming 
 - Elevator that lets people in and out 
 - Ice cream cone that is moving horizontally and you must stack the dropping ice cream scoops 
 
 
+Task List 
+- Sound 
+- Drop randomly flavored icecream scoops 
+    - ***make a new class for this 
+- make the triangle appear after a few seconds or do like a 3, 2, 1 before it starts (a intermediate game state?)
+    - can add to existing game state or do countdown gamestate 
+
 
 Project Feature List 
-- Need to use relative coordinates to let the game adapt to the different screen sizes and so you can change the game's size
+- Need to use relative coordinates to let the game adapt to the different screen sizes and so you can change the game's size (DONE)
 - 3 game states: 
-    1. Welcome 
-    2. Actual Game 
-    3. If/when you lose 
-
-*/ 
+    1. Welcome (SceneStart)
+    2. Actual Game (ScenePlay)
+    3. If/when you lose (SceneEnd)
+- Keep track of score/# of scoops on cone 
+- When you press the space bar, the scoop falls 
+- if you press a certain key, the cone speeds up 
+- Animated splat for game over for SceneEnd 
+ 

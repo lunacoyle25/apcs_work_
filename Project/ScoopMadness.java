@@ -5,16 +5,17 @@ ScoopMadness.java
  
 import processing.core.*; 
 import java.util.*; 
+import gifAnimation.*;
 
 public class ScoopMadness extends PApplet
 {
+
 PFont airTraveler; 
     public void setup()
     {    
         scenes = new ArrayList<Scene>(); 
         scenes.add(new SceneStart(this));
-        //scenes.add(new Scene_Play(this));
-        //scenes.add(new Scene_End(this));
+        scenes.add(new ScenePlay(this));
         current = 0; 
     }
     
@@ -33,12 +34,16 @@ PFont airTraveler;
     }
     
     private ArrayList<Scene> scenes; 
-    private int current; 
+    private int current;  
+    
+    public void draw()
+    {
+        scenes.get(current).display(); 
+    }
     
     public static void main(String[] args) 
     {
         PApplet.main("ScoopMadness");
     }
-    
-     
+       
 }
