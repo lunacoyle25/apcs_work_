@@ -28,6 +28,7 @@ public class VehicleTest
         System.out.println();
         
         int result1 = VehicleStats.numberOfWheels(vehicles); 
+        
         //Call the method from VehicleStats
         int expected1 = 9; 
         System.out.println("Total Number of Wheels: " + result1);
