@@ -10,16 +10,22 @@ public class ScenePlay implements Scene {
         this.triangleWidth = 50; 
         this.triangleHeight = 100; 
         this.speed = 3; 
+        sky = p.loadImage("Seamless Blue Sky.jpg"); 
+        sky.resize(p.width, p.height);
     }
 
-    public void setup() 
+    /*
+    public void draw()
     {
-        
+        p.background(sky); 
+        p.image(sky, 0, 0, p.width, p.height);
     }
+    */
 
     public void display() 
     {
-        p.background(197, 234, 250); 
+        p.background(sky);
+        //p.background(197, 234, 250); 
         
         float x1 = centerX;
         float y1 = p.height; // Bottom tip touching the ground
@@ -42,4 +48,5 @@ public class ScenePlay implements Scene {
     private float speed; 
     private float triangleWidth; 
     private float triangleHeight; 
+    private PImage sky; 
 }
