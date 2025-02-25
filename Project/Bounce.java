@@ -2,6 +2,7 @@
 Starter Processing Display 
 */ 
 
+import java.util.*;
 import processing.core.*; 
 
 public class Bounce extends PApplet
@@ -12,7 +13,7 @@ public class Bounce extends PApplet
     }
     public void setup()
     {
-        circle = new ArrayList<Circle>();
+        ArrayList<Circle> circles = new ArrayList<Circle>();
         circle.add(new Circle(this));
     }
     public void draw()

@@ -18,7 +18,8 @@ public class AnimalCalculator
         Animal fewest = animals.get(0); 
         String fewestName = fewest.getName(); 
         int fewestLegs = fewest.getLegCount(); 
-        for (Animal a : animals)
+        cd
+            for (Animal a : animals)
         {
             if (a.getLegCount() <= fewestLegs)
             {
