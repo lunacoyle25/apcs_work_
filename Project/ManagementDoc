@@ -13,13 +13,14 @@ Task List
 
 
 Project Feature List 
-- Need to use relative coordinates to let the game adapt to the different screen sizes and so you can change the game's size (DONE)
+- Need to use relative coordinates to let the game adapt to the different screen sizes and so you can change the game's size 
+- Count the number of falling ice cream cones 
 - 3 game states: 
     1. Welcome (SceneStart)
     2. Actual Game (ScenePlay)
     3. If/when you lose (SceneEnd)
 - Keep track of score/# of scoops on cone 
 - When you press the space bar, the scoop falls 
-- if you press a certain key, the cone speeds up 
+- cone speeds up over time or after a certain number of ice creams are on the cone 
 - Animated splat for game over for SceneEnd 
  

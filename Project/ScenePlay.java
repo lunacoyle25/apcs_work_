@@ -12,6 +12,8 @@ public class ScenePlay implements Scene {
         this.speed = 3; 
         sky = p.loadImage("Seamless Blue Sky.jpg"); 
         sky.resize(p.width, p.height);
+         
+        //this.fallingScoops = fallingScoops;
     }
 
     /*
@@ -24,9 +26,8 @@ public class ScenePlay implements Scene {
 
     public void display() 
     {
-        p.background(sky);
-        //p.background(197, 234, 250); 
-        
+        p.background(sky); 
+        //p.fallingScoops; 
         float x1 = centerX;
         float y1 = p.height; //bottom tip touching the ground
         float x2 = centerX - triangleWidth / 2;
@@ -40,7 +41,7 @@ public class ScenePlay implements Scene {
         
         if (centerX > p.width - triangleWidth / 2 || centerX < triangleWidth / 2) {
             speed *= -1;
-        }
+        }  
     }
     
     private PApplet p;
@@ -49,4 +50,5 @@ public class ScenePlay implements Scene {
     private float triangleWidth; 
     private float triangleHeight; 
     private PImage sky; 
+    //private FallingScoops fallingScoops; 
 }

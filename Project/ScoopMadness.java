@@ -9,8 +9,8 @@ import gifAnimation.*;
 
 public class ScoopMadness extends PApplet
 {
-
-PFont airTraveler; 
+    
+    PFont airTraveler; 
     public void setup()
     {    
         scenes = new ArrayList<Scene>(); 
@@ -20,8 +20,12 @@ PFont airTraveler;
     }
     
     public void settings()
-    {
-        size(600, 600);
+    {    
+        fullScreen(); 
+        //size(displayWidth, displayHeight);
+        //surface.setResizable(true);
+        //fixed screen size and the stuff inside
+        //frame.setResizable(true);
     }
     
     public void keyPressed()
@@ -45,5 +49,6 @@ PFont airTraveler;
     {
         PApplet.main("ScoopMadness");
     }
+    
        
 }

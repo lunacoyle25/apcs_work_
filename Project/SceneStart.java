@@ -18,7 +18,7 @@ public class SceneStart implements Scene
  
    }
    
-   public void setup()
+   /*public void setup()
    {
         
    }
@@ -26,7 +26,8 @@ public class SceneStart implements Scene
    public void draw()
    {
         
-   }
+   }*/ 
+   
    public void display()
    {
         p.background(255, 209, 223);
