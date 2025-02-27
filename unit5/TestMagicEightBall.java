@@ -10,7 +10,7 @@ public class TestMagicEightBall
     {
         MagicEightBall magic = new MagicEightBall();
         
-        System.out.println("Are Eden and Noah endgame?");
-        System.out.println("result: " + magic.getAnswer("Will i get an A?"));
+        System.out.println("Will Esme do so good today?");
+        System.out.println("result: " + magic.getAnswer(""));
     }
 }

@@ -36,7 +36,7 @@ public class MagicEightBall
         }
         if (random < .40 && random >= .30)
         {
-            return "Cannot predict now";
+            return "Definitely not, girl";
         }
         if (random < .30 && random >= .20)
         {   
