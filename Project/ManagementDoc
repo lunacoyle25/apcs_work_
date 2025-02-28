@@ -10,6 +10,8 @@ Task List
     - ***make a new class for this 
 - make the triangle appear after a few seconds or do like a 3, 2, 1 before it starts (a intermediate game state?)
     - can add to existing game state or do countdown gamestate 
+- make it fullscreen NOT resizeable
+- for the title font next time write a function that takes the width and gives it the color (for alternating colors)
 
 
 Project Feature List 

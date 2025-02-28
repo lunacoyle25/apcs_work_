@@ -13,6 +13,10 @@ public class ScenePlay implements Scene {
         sky = p.loadImage("Seamless Blue Sky.jpg"); 
         sky.resize(p.width, p.height);
          
+         //need to do something like this...ask Jasmine? 
+         //fallingScoops = ArrayList<FallingScoops>(); 
+         //fallingScoops.add(new fallingScoop())
+         
         //this.fallingScoops = fallingScoops;
     }
 
