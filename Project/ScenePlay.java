@@ -1,58 +1,119 @@
 import java.util.*; 
 import processing.core.*; 
-import java.awt.Rectangle;
+//import java.awt.Rectangle;
 
 public class ScenePlay implements Scene {
-     public ScenePlay(PApplet p) 
-     {
+
+    private Cone cone;
+    private ArrayList<FallingScoops> scoops;
+    private PApplet p;
+    private float centerX;
+    private float speed;
+    private PImage coneImage;
+    private PImage sky;
+    private boolean gameOver = false;
+    private PImage mintChipImg;                  // MADE MINT CHIP IMG
+
+    public ScenePlay(PApplet p) 
+    {        
         this.p = p;
         this.centerX = p.width / 2;
-        this.triangleWidth = 50; 
-        this.triangleHeight = 100; 
-        this.speed = 3; 
-        sky = p.loadImage("Seamless Blue Sky.jpg"); 
+        this.speed = 4;
+        
+        this.sky = p.loadImage("Seamless Blue Sky.jpg");
         sky.resize(p.width, p.height);
-         
-         //need to do something like this...ask Jasmine? 
-         //fallingScoops = ArrayList<FallingScoops>(); 
-         //fallingScoops.add(new fallingScoop())
-         
-        //this.fallingScoops = fallingScoops;
+        this.scoops = new ArrayList<>();
+        
+        mintChipImg = p.loadImage("mint chip scoop.png");                         // INITIALIZE MINT CHIP IMG
+        mintChipImg.resize(200, 0);                         //
+        
+        coneImage = p.loadImage("cone.png");     // CROPPED CONE IMG FILE
+        
+        float coneHeight = coneImage.height / 3;       // MOVED HERE
+        float coneWidth = coneImage.width / 3;
+        float coneX = p.width / 2;
+        float coneY = p.height-170;
+        
+        coneImage.resize((int) coneWidth, (int) coneHeight); // RESIZE HERE INSTEAD OF IN P.IMAGE
+        
+        this.cone = new Cone(p, coneX, coneY, coneImage); //cone constructor          // MOVED DOWN
+        
+        scoops.add(new FallingScoops(p, cone, mintChipImg));   
     }
-
-    /*
-    public void draw()
-    {
-        p.background(sky); 
-        p.image(sky, 0, 0, p.width, p.height);
-    }
-    */
 
     public void display() 
     {
-        p.background(sky); 
-        //p.fallingScoops; 
-        float x1 = centerX;
-        float y1 = p.height; //bottom tip touching the ground
-        float x2 = centerX - triangleWidth / 2;
-        float y2 = p.height - triangleHeight; // top-left corner
-        float x3 = centerX + triangleWidth / 2;
-        float y3 = p.height - triangleHeight; // top-right corner
-
-        p.fill(196, 164, 132);
-        p.triangle(x1, y1, x2, y2, x3, y3);
-        centerX += speed;
+        /*float coneHeight = coneImage.height / 3;
+        float coneWidth = coneImage.width / 3;
+        float coneY = p.height - coneHeight;
+        float coneX = centerX;*/                                            // MOVED TO CONSTRUCTOR
         
-        if (centerX > p.width - triangleWidth / 2 || centerX < triangleWidth / 2) {
+        p.background(sky);
+        p.image(sky, 0, 0, p.width, p.height);
+        cone.display();   // DISPLAY CONE
+
+        //p.image(coneImage, coneX - coneWidth / 2, coneY, coneWidth, coneHeight);          // TRANSFERRED TO CONE.JAVA
+
+        /*centerX += speed;
+        if (centerX > p.width - coneWidth / 4 || centerX < coneWidth / 4) 
+        {
             speed *= -1;
-        }  
+        }*/
+
+        /*for (Scoop s : scoops)
+        {
+            s.update(coneX, coneY, coneWidth);
+            if (s.update(coneX, coneY, coneWidth)) 
+            {
+                gameOver = true;
+            }
+            s.display(); 
+        }*/
+        
+        cone.update();        // UPDATE CONE
+
+        for (FallingScoops scoop : scoops) 
+        {
+            scoop.update();
+            if (scoop.touches(cone)) 
+            {
+                scoop.attachTo(cone);
+            }
+            scoop.display();
+        }
+        /*p.textAlign(p.CENTER, p.CENTER);
+        p.textSize(100);
+        p.fill(86, 190, 179);
+        p.text(scoops., p.width/2, p.height/3);
+        p.textSize(70); */
+        
     }
-    
-    private PApplet p;
-    private float centerX; // x position (center of the triangle)
-    private float speed; 
-    private float triangleWidth; 
-    private float triangleHeight; 
-    private PImage sky; 
-    //private FallingScoops fallingScoops; 
+
+    public void close() 
+    {
+        //file.stop(); 
+    }
+
+    public boolean isGameOver() 
+    {
+        for (FallingScoops scoop : scoops) 
+        {
+            if (scoop.getScoopY() > p.height) 
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void keyPressed() 
+    {
+        if (p.key == ' ') 
+        {
+            for (FallingScoops s : scoops)
+            {
+               s.fall(); 
+            }
+        }
+    }
 }

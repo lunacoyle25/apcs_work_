@@ -25,4 +25,11 @@ Project Feature List
 - When you press the space bar, the scoop falls 
 - cone speeds up over time or after a certain number of ice creams are on the cone 
 - Animated splat for game over for SceneEnd 
+- Collision detection 
+- Sound 
+- Count cones 
+- Scene End class
+- RELATIVE COORDINATES
+- abstract class
+    - would let me have a default empty class
  

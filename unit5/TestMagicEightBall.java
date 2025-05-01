@@ -10,7 +10,7 @@ public class TestMagicEightBall
     {
         MagicEightBall magic = new MagicEightBall();
         
-        System.out.println("Will Esme do so good today?");
+        System.out.println("Is Steph Curry the best player in the world?");
         System.out.println("result: " + magic.getAnswer(""));
     }
 }
